@@ -10,7 +10,7 @@
 #4: I'm not responsible of your mining set-ups. Please DYOR.<br>
 
 <h3>TUTORIALS:</h3>
-If you need help, there're videos about the set up: [youtube.com/](https://www.youtube.com/channel/UCjJHjkDo-7Ia1xAhIEp3h3Q)
+If you need help, there're videos about the set up (in french atm): [youtube.com/](https://www.youtube.com/playlist?list=PLVkpvudLgb2nfsEBn600AzkpIT7OJxm_S)
 
 
 <h3>HOW TO MAKE IT WORK?</h3>
