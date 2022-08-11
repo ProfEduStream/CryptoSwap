@@ -5,6 +5,10 @@ Those files are the first version of a CryptoSwap programm, which enables to swa
 Some improvements can obviously be done. <br>
 Everyone is autorized to use those scripts and to modify them.
 
+<h3>ABSTRACT</h3>
+If you need help, there's a video about the set up: [youtube.com/](https://www.youtube.com/channel/UCjJHjkDo-7Ia1xAhIEp3h3Q)
+
+
 <h3>HOW TO MAKE IT WORK?</h3>
 
 <h4>Let's begin with miners:</h4>
@@ -12,20 +16,24 @@ Everyone is autorized to use those scripts and to modify them.
 2) Download all miners you want to use (example: t-rex-x.xx.x-win, NBMiner_Win, ...) <br>
 3) Put it somewhere (example: Desktop) on your computer <br>
 4) Inside of those files, edit miners of cryptos you've chosen (add stratum, adress, parameters, overclocks, etc.) <br>
-Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat*
+Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat* <br>
 
 <h4>Let's begin with CryptoSwap:</h4>
 5) Download launcher.bat and setupminers.bat <br>
 6) Put it somewhere (example: Desktop) on your computer <br>
 Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat* <br>
 7) Edit setupminers and add: the model of the GPU, where are your mining files, which coins you are okay to mine, and directories of miners (everything between ====) <br>
-8) Edit launcher and modify TIMERSEC (example: 10 is for 10s. 3600s is for 1h)
+8) Edit launcher and modify TIMERSEC (example: 10 is for 10s. 3600s is for 1h) <br>
 
 <h4>Let's collect datas:</h4>
-7) Launch Datas.odt with LibreOfficeCalc (for example), and let it open 24h/24 <br>
-8) Accept to actualize datas <br>
-9) In Tools > Macros > "Edit macros", select OpenOffice Basic... <br>
-10) In Datas.odt > Standard > ExportCSV, launch the macro (it gonna run 24h/24) <br>
+9) Go on whattomine.com and add every hashrates on the algorithms you're okay to mine (cf 1)) <br>
+10) Click on Calculate, and copy the url <br>
+11) Launch Datas.odt <br>
+Rem: You'll have to let this one opened 24h/24. <br>
+12) In the second sheet, click on A1 then Insertion > Link with external datas, and paste the url of your GPU datas from whattomine <br>
+13) Click on "Actualize each xx seconds" <br>
+14) In Tools > Macros > "Edit macros", select OpenOffice Basic... <br>
+15) In Datas.odt > Standard > ExportCSV, launch the macro (it gonna run 24h/24) <br>
 Rem1: This macro creates each 15 minutes a new file: C:\Users\Toto-\Desktop\1070.csv; in which there's the new crypto to mine <br>
 Rem2: You can modify this file directory, and the timer. To do this, select Tools > Macros > "Edit macros" > OpenOffice Basic... > Datas.odt > Standard > ExportCSV > Edit <br>
 ---      To change name and directory, modify: "C:\Users\Toto-\Desktop\1070.csv" <br>
