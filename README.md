@@ -1,12 +1,16 @@
 # CryptoSwap
 
-<h3>ABSTRACT</h3>
-Those files are the first version of a CryptoSwap programm, which enables to swap on the most efficient mining software of a single GPU each xx minutes.<br>
-Some improvements can obviously be done. <br>
-Everyone is autorized to use those scripts and to modify them.
+<h3>ABSTRACT:</h3>
+#1: Those files are the first version of CryptoSwap, which enables to swap on the most efficient mining software each x minutes.<br>
+<br>
+#2: Some improvements can obviously be done. Mainly the auto-swap system for a RIG with different GPU models. <br>
+<br>
+#3: Everyone can use those scripts and modify them. Please contact me on github if there's something wrong. <br>
+<br>
+#4: I'm not responsible of your mining set-ups. Please DYOR.<br>
 
-<h3>ABSTRACT</h3>
-If you need help, there's a video about the set up: [youtube.com/](https://www.youtube.com/channel/UCjJHjkDo-7Ia1xAhIEp3h3Q)
+<h3>TUTORIALS:</h3>
+If you need help, there're videos about the set up: [youtube.com/](https://www.youtube.com/channel/UCjJHjkDo-7Ia1xAhIEp3h3Q)
 
 
 <h3>HOW TO MAKE IT WORK?</h3>
@@ -15,29 +19,29 @@ If you need help, there's a video about the set up: [youtube.com/](https://www.y
 1) Choose which cryptos you want to mine <br>
 2) Download all miners you want to use (example: t-rex-x.xx.x-win, NBMiner_Win, ...) <br>
 3) Put it somewhere (example: Desktop) on your computer <br>
-4) Inside of those files, edit miners of cryptos you've chosen (add stratum, adress, parameters, overclocks, etc.) <br>
-Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat* <br>
+4) Inside of those files, edit miners.bat of cryptos you've chosen (add stratum, adress, parameters, overclocks, etc.) <br>
+Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat <br>
 
 <h4>Let's begin with CryptoSwap:</h4>
 5) Download launcher.bat and setupminers.bat <br>
 6) Put it somewhere (example: Desktop) on your computer <br>
 Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat* <br>
-7) Edit setupminers and add: the model of the GPU, where are your mining files, which coins you are okay to mine, and directories of miners (everything between ====) <br>
+7) Edit setupminers and add: the model of the GPU, which coins you are okay to mine, and directories of miners (everything between ====) <br>
 8) Edit launcher and modify TIMERSEC (example: 10 is for 10s. 3600s is for 1h) <br>
 
 <h4>Let's collect datas:</h4>
-9) Go on whattomine.com and add every hashrates on the algorithms you're okay to mine (cf 1)) <br>
+9) Go on <a href="https://whattomine.com/">https://whattomine.com/</a> and add every hashrates of the algorithms you're okay to mine (cf 1) and 7)) <br>
 10) Click on Calculate, and copy the url <br>
-11) Launch Datas.odt <br>
-Rem: You'll have to let this one opened 24h/24. <br>
-12) In the second sheet, click on A1 then Insertion > Link with external datas, and paste the url of your GPU datas from whattomine <br>
-13) Click on "Actualize each xx seconds" <br>
-14) In Tools > Macros > "Edit macros", select OpenOffice Basic... <br>
-15) In Datas.odt > Standard > ExportCSV, launch the macro (it gonna run 24h/24) <br>
-Rem1: This macro creates each 15 minutes a new file: C:\Users\Toto-\Desktop\1070.csv; in which there's the new crypto to mine <br>
+11) Launch Datas.ods (example: with Open Office Calc, it's free) <br>
+Rem: You'll have to let this file opened 24h/24. <br>
+12) In the second sheet, click on A1 then Insertion > Link with external datas. Then paste the url of your GPU's datas from whattomine <br>
+13) Click on "Actualize each x seconds" and modify that (example: 60s) <br>
+14) Click on Tools > Macros > "Edit macros". Then select OpenOffice Basic... <br>
+15) Click on Datas.odt > Standard > ExportCSV. Then launch the macro (it gonna run 24h/24) <br>
+Rem1: This macro creates each x min (example: 14min 58s) a new file: C:\Users\Toto-\Desktop\1070.csv; in which there's the new crypto to mine <br>
 Rem2: You can modify this file directory, and the timer. To do this, select Tools > Macros > "Edit macros" > OpenOffice Basic... > Datas.odt > Standard > ExportCSV > Edit <br>
 ---      To change name and directory, modify: "C:\Users\Toto-\Desktop\1070.csv" <br>
----      To change the timer, modify: "wait 900000" (15 min x 60000 millisec/min = 900000 millisec. 3600000 millisec is for 1h)
+---      To change the timer, modify: "wait 898000" (15 min x 60000 millisec/min = 900000 millisec. 3600000 millisec is for 1h)
 
 <h4>Let's go !</h4>
 11) Launch launcher.bat <br>
@@ -45,9 +49,9 @@ Rem2: You can modify this file directory, and the timer. To do this, select Tool
 
 
 
-<h3>BUT HOW DOES IT REALLY WORK?</h3>
+<h3>BUT... HOW DOES IT REALLY WORK?</h3>
 
-First of all, datas are from whattomine.com. After selecting all parameters, clicking on "Calculate" enables you to find the bettest cryptos to mine; with a new URL.<br>
-Using LibreOfficeCalc, you can import an html table; which will be refreshed all xx minutes in this software. On the first sheet, you'll also extract the crypto to mine (to my mind, it's the one with the highest Rev. $)<br>
-Using this same software, you can export each xx minutes the first sheet of this file (a .csv); with the crypto you want to mine. <br>
-Finaly, when you launch launcher.bat, the script read each xx minutes/seconds this .csv, and use setupminers.bat to launch the right miner.
+First of all, datas are from whattomine.com. After selecting all parameters, clicking on "Calculate" enables you to find the bettest cryptos to mine; with a "dynamic" URL.<br>
+Using Open Office Calc, you can import an html table; which will be refreshed all x minutes in this software. On the first sheet, you'll also extract the crypto to mine (to my mind, it's the one with the highest Rev. $; but you can change that by modifying the sheet n°2 of this file).<br>
+Using this same software, you can export each x minutes the first sheet of this file (.csv); with the crypto you want to mine for the next y min. <br>
+Finaly, when you launch launcher.bat, the script read each y minutes/seconds this .csv, and use setupminers.bat to launch the right miner.
