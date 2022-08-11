@@ -11,7 +11,7 @@ Sub SaveSheetToCsv()
 	FileName = "C:\Users\Toto-\Desktop\1070.csv" 'you can modify this directory
 	FileURL = convertToURL(FileName)
 	Document.StoreToURL(FileURL, Propval())
-	wait 890000 'you can modify the timer too
+	wait 898000 'you can modify the timer too
 	repete()
 End Sub
 
