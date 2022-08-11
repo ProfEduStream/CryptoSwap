@@ -1,0 +1,20 @@
+Sub SaveSheetToCsv()
+	Document = ThisComponent  'assigns the current document to the variable document
+	Sheets = Document.Sheets  'get the container of all Sheets
+	Sheet = Sheets(0)   'get the first sheet
+	Document.CurrentController.setActiveSheet(Sheet)
+	Dim Propval(1) as New com.sun.star.beans.PropertyValue
+	Propval(0).Name = "FilterName"
+	Propval(0).Value = "Text - txt - csv (StarCalc)"
+	Propval(1).Name = "FilterOptions"
+	Propval(1).Value ="59,34,0,1,1"   'ASCII  59 = ;  34 = "
+	FileName = "C:\Users\Toto-\Desktop\1070.csv" 'you can modify this directory
+	FileURL = convertToURL(FileName)
+	Document.StoreToURL(FileURL, Propval())
+	wait 890000 'you can modify the timer too
+	repete()
+End Sub
+
+Sub repete()
+	SaveSheetToCsv
+End Sub
