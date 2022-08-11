@@ -4,7 +4,7 @@ echo ___________________________________________________________________________
 
 :: defining in how many seconds the launcher-swap-programm will be launched again (in order to swap with an other crypto)
 ::============================================================
-set TIMERSEC=10
+set TIMERSEC=900
 ::============================================================
 set /a TIMERMIN = %TIMERSEC%/60
 setlocal enabledelayedexpansion
