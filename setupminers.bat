@@ -13,6 +13,7 @@ set c4=Flux(FLUX)
 set c5=Conflux(CFX)
 set c6=Ravencoin(RVN)
 set c7=Sero(SER)
+set DEFAULTMINER=C:\Users\Toto-\Desktop\t-rex-0.26.4-win\ETH-2miners.bat
 ::============================================================
 
 :: searching all words in the column 1 of your %GPU%.csv (this file must have only one cell, the name of the crypto you want to mine, like "Ethereum(ETH)" - cf names on whattomine.com)
@@ -24,9 +25,10 @@ if %VARIABLE%==%c1% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-win\ETH-2miners.b
 if %VARIABLE%==%c2% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-win\ETC-2miners.bat) 
 if %VARIABLE%==%c3% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-win\ERGO-2miners.bat) 
 if %VARIABLE%==%c4% (start C:\Users\Toto-\Desktop\1.54\mine_flux.bat) 
-if %VARIABLE%==%c5% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-winCFX-nanopool.bat) 
+if %VARIABLE%==%c5% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-win\CFX-nanopool.bat) 
 if %VARIABLE%==%c6% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-win\RVN-2miners.bat)
 if %VARIABLE%==%c7% (start C:\Users\Toto-\Desktop\t-rex-0.26.4-win\SERO-serocash.bat)
+if %VARIABLE% NEQ %c1% if %VARIABLE% NEQ %c2% if %VARIABLE% NEQ %c3% if %VARIABLE% NEQ %c4% if %VARIABLE% NEQ %c5% if %VARIABLE% NEQ %c6% if %VARIABLE% NEQ %c7% (start %DEFAULTMINER%)
 ::============================================================
 
 endlocal
