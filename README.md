@@ -25,7 +25,7 @@ Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/fi
 <h4>Let's begin with CryptoSwap:</h4>
 5) Download launcher.bat and setupminers.bat <br>
 6) Put it somewhere (example: Desktop) on your computer <br>
-Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat* <br>
+Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat. Same for gminer, please put miner.exe in the same directory/file than setupminers.bat. <br>
 7) Edit setupminers and add: the model of the GPU, which coins you are okay to mine, directories of miners (everything between ====), and the miner which will be launched if the most profitable crypto isn't one you've set up <br>
 8) Edit launcher and modify TIMERSEC (example: 10 is for 10s. 3600s is for 1h) <br>
 
