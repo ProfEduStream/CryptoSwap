@@ -20,7 +20,7 @@ If you need help, there're videos about the set up (in french atm): [youtube.com
 2) Download all miners you want to use (example: t-rex-x.xx.x-win, NBMiner_Win, ...) <br>
 3) Put it somewhere (example: Desktop) on your computer <br>
 4) Inside of those files, edit miners.bat of cryptos you've chosen (add stratum, adress, parameters, overclocks, etc.) <br>
-Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat <br>
+Rem: If you gonna use lolMiner, please put lolMiner.exe in the same directory/file than setupminers.bat. Same for gminer, please put miner.exe in the same directory/file than setupminers.bat. <br>
 
 <h4>Let's begin with CryptoSwap:</h4>
 5) Download launcher.bat and setupminers.bat <br>
